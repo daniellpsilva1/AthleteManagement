@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 240, 242, 245;
+  --background-end-rgb: 255, 255, 255;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-start-rgb));
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700 transition-colors;
+  }
+
+  .btn-secondary {
+    @apply px-4 py-2 bg-white border border-gray-300 rounded-md hover:bg-gray-50 transition-colors;
+  }
+
+  .nav-link {
+    @apply block px-4 py-2 hover:bg-gray-100 rounded-md transition-colors;
+  }
+
+  .nav-link-active {
+    @apply block px-4 py-2 bg-gray-200 rounded-md font-medium;
+  }
+
+  .section-title {
+    @apply text-2xl font-semibold mb-4;
+  }
+
+  .card {
+    @apply bg-white p-6 rounded-lg shadow-sm;
+  }
+}
+
